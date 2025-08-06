@@ -12,6 +12,15 @@ public class DataType {
 
     char gender = 'M';
     System.out.println(gender);
+    char ch = 'あ';
+    char ch2 = '是';
+    char ch3 = '時';
+
+    int chAscii = ch;
+    System.out.println(chAscii);
+    int chAscii2 = ch2;
+    System.out.println(chAscii2);
+
     // define char value -> use single quote ''
     // define String value -> use double qote ""
     // char value has to be single character
@@ -43,7 +52,68 @@ public class DataType {
     // Step 2: assign int value into int variable
     System.out.println(result);
 
-    int s5 = b1 + s3;
+    // short s5 = b1 + s3;  Nooooooooooo (cannot assign int value to short variable!!!!!!)
+    int s5 = b1 + s3; // byte + short ->  int + int -> int
+    // short and byte are special cases!!!!!!!
     System.out.println(s5);
+
+    //byte b10 = b1 + 1; // int cannot put into byte
+    // coz  byte + int -> int, so we cannot assign int value into byte variable
+    int r2 = b1 + 1;
+
+    // Overflow
+    int i10 = 2_147_483_647;
+    int i11 = i10 + 1;
+    int i12 = i10 + 10;
+    System.out.println(i11);
+    System.out.println(i12);
+
+    int i13 = 2_100_000_000 + 100_000_000;
+    System.out.println(i13);
+
+    // by default, 7.84 is a double value
+    // by default, 7 is a int value
+    float width = 7.84f;
+    long k = 10L;
+
+    //coz 7.77 is double value , and we cannot assign double value to float variable
+    // double > float
+    // float f1 = 7.77;
+
+    float length = 5.3f;
+    float area = length * width;
+    System.out.println(area);
+
+    //float area2 = length * 7.84; // double > float so cant assign into float variable!!
+
+    // ASCII Code
+    char letter = 97;
+    System.out.println(letter); // wecan assign har value or ASCII code
+
+    //char letter2 = letter + 1;
+    // Step 1: char value + int value -> int -> cannot assign int value to char variable
+
+    // Solution downcasting
+    char letter3 = (char) (letter + 1); //cast // downcast (int -> char)
+    System.out.println(letter3);
+    // downcast (int -> char)
+
+    int asciiForZero = 48;
+    char as = (char) asciiForZero;
+    System.out.println(as);
+
+    int asciiForA = 'A';
+    //Step 2: assign char value into int var
+    // Step 3: auto-convert char value to ascii code
+    System.out.println(asciiForA);
+
+    char letterForZ = 'A' + 25; // explicit char value + explicit int value (no risk)
+    System.out.println(letterForZ);
+    
+    int distance = 2;
+    char letterForC = (char) ('A' + distance); // this one not explicit
+    System.out.println(letterForC);
+
+
   }
 }
