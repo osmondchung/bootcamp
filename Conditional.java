@@ -54,7 +54,11 @@ public class Conditional {
       } 
     }*/
 
-    Scanner myObj = new Scanner(System.in);
+
+    // female -> 10% more premium
+    // smoker -> 15% more premium
+    // age > 50 and is a male -> 8% more premium
+    /*Scanner myObj = new Scanner(System.in);
     Scanner myObj2 = new Scanner(System.in);
     Scanner myObj3 = new Scanner(System.in);
     int age = 44;
@@ -100,9 +104,54 @@ public class Conditional {
     } else {
       premium = premium + 0.08 * premium;
       System.out.println("Premium for a 50+ age male non-smoker is: " + premium);
+    }*/
+
+
+    // Program most importantly: 
+    int age = 44;
+    //char gender = 'F';
+    //char smoker = 'F';
+    boolean isMale = true;
+    boolean isSmoker = true;
+    double premium = 100.0;
+    double extraPremPct = 0.0;
+    if (isMale){
+      if (age > 50){
+        extraPremPct = extraPremPct + 8.0;
+      }
+      else {// Female
+        extraPremPct = extraPremPct + 10.0;
+      }
+    if (isSmoker){
+        extraPremPct = extraPremPct + 15.0;
+    }
+      premium = premium * (100 + extraPremPct) / 100.0;
+      System.out.println(premium);
     }
 
-    //
+    // leap year
+    // divided by 4 -> leap year
+    // divided by 100 -> Not a leap year
+    // divided by 400 -> leap year
+    int year = 1900;
+    boolean isLeapYear = false;
+    boolean isDividedBy4 = year % 4 == 0;
+    boolean isDividedBy100 = year % 100 == 0;
+    boolean isDividedBy400 = year % 400 == 0;
+
+    if (isDividedBy4){
+      if (isDividedBy100){
+        if (isDividedBy400){
+        isLeapYear = true;
+        }else{
+          isLeapYear = false;
+        }
+      }else{
+        isLeapYear = true;
+      }
+    }
+
+    System.out.println("Leap Year?" + isLeapYear);
 
 
   }
