@@ -107,7 +107,7 @@ public class Conditional {
     }*/
 
 
-    // Program most importantly: 
+    /*// Program most importantly: 
     int age = 44;
     //char gender = 'F';
     //char smoker = 'F';
@@ -127,7 +127,7 @@ public class Conditional {
     }
       premium = premium * (100 + extraPremPct) / 100.0;
       System.out.println(premium);
-    }
+    }*/
 
     // leap year
     // divided by 4 -> leap year
@@ -139,11 +139,11 @@ public class Conditional {
     boolean isDividedBy100 = year % 100 == 0;
     boolean isDividedBy400 = year % 400 == 0;
 
-    if (isDividedBy4){
+    /*if (isDividedBy4){
       if (isDividedBy100){
         if (isDividedBy400){
         isLeapYear = true;
-        }else{
+        }else{ // this one can delete coz default, coz default is false so can just consider true
           isLeapYear = false;
         }
       }else{
@@ -151,8 +151,9 @@ public class Conditional {
       }
     }
 
+    System.out.println("Leap Year?" + isLeapYear);*/
+    ///isLeapYear = isDividedBy4 && isDividedBy100 && isDividedBy400 || isDividedBy4 && !isDividedBy100;
+    isLeapYear = isDividedBy4 && (isDividedBy100 && isDividedBy400 || !isDividedBy100);
     System.out.println("Leap Year?" + isLeapYear);
-
-
   }
 }
