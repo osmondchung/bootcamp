@@ -155,5 +155,74 @@ public class Conditional {
     ///isLeapYear = isDividedBy4 && isDividedBy100 && isDividedBy400 || isDividedBy4 && !isDividedBy100;
     isLeapYear = isDividedBy4 && (isDividedBy100 && isDividedBy400 || !isDividedBy100);
     System.out.println("Leap Year?" + isLeapYear);
+
+    // else if
+    int score = 95;
+    char grade = ' ';
+    // A: 90 or above
+    // B: 80 - 89
+    // C: 70 - 79
+    // F: < 70
+    // Think from small range to large range when if else
+    // think about the mutually exclusive cases
+    // write mutually exclusive cases first
+    // check value range sue else if
+    if (score >= 90){
+      grade = 'A';
+    } else if (score >= 80){
+      grade = 'B';
+    } else if (score >= 70){
+      grade = 'C';
+    } else {
+      grade = 'F';
+    }
+    System.out.println("Grade: " + grade);
+
+    boolean isElderly = false;
+    boolean isMale = true;
+    
+    // better for maintainence
+    if (isElderly){
+      
+    } else {
+      if (isMale) {
+
+      }
+    }
+
+    // not so good for better maintainence
+    if (isElderly){
+      
+    } else if (isMale) {
+
+    }
+
+    // 1. if-else, if-else if-else, if, if-else if
+    // 2. switch
+
+    // switch can only check equals value ONLY, NO range checking
+    // no && checking (Single condition)
+    score = 75;
+    switch (score) {
+      case 66: 
+    }
+
+    // By default, run all code blocks after meet the condition 
+    // you hv to break it to exit the switch
+    // suitable for finite value of cases
+    char color = 'R';
+    switch (color){
+      case 'R':
+        System.out.println("Red");
+        break;
+      case 'G':
+        System.out.println("Green");
+        break;
+      case 'B':
+        System.out.println("Blue");
+        break;
+    }
+
+
   }
 }

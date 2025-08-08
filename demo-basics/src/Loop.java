@@ -65,8 +65,33 @@ public class Loop {
       System.out.println(targetCh + " is found");
       System.out.println(counter);
     }
-    
-    // Searching pattern
 
+    // print 1 - 10, even num only
+    for (int i = 0; i < 10; i++){
+      if (i % 2 == 0){
+        System.out.println(i + 2);
+      }
+    }
+
+    // continue
+    // skip the rest and continue the loop
+    for (int i = 0; i < 10; i++){
+      if (i % 2 != 0){
+        continue; // go to the next iteration -> i++
+      }
+      System.out.println(i + 2);
+    }
+
+    // break
+    // exit the loop
+    String name = "John";
+    for (int i = 0; i < name.length(); i++){
+      if (name.charAt(i) == 'J'){
+        System.out.println("Yes");
+        break;
+      }
+    }
+    
+    
   }
 }
