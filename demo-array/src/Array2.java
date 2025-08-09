@@ -52,12 +52,20 @@ public class Array2 {
     System.out.println(Arrays.toString(namesLength));
 
     // String
-    String word = "lelel"; // lelel -> true, lellel -> true
+    String word = "as"; // lelel -> true, lellel -> true
     boolean isSymmetrical = false;
     for (int i = 0; i < word.length(); i++){
         if (word.charAt(i) == word.charAt(word.length() - (i + 1))){
+          if (i == word.length() - (i + 1)) {
             isSymmetrical = true;
+            break;
+            }
+          isSymmetrical = true;
+        } else {
+          isSymmetrical = false;
+          break;
         }
+
       }
     System.out.println(isSymmetrical); 
 
