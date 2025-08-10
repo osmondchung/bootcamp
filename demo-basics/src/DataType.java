@@ -53,6 +53,7 @@ public class DataType {
     System.out.println(result);
 
     // short s5 = b1 + s3;  Nooooooooooo (cannot assign int value to short variable!!!!!!)
+    // byte, short, char operands are automatically promoted to int 
     int s5 = b1 + s3; // byte + short ->  int + int -> int
     // short and byte are special cases!!!!!!!
     System.out.println(s5);
@@ -76,8 +77,10 @@ public class DataType {
     float width = 7.84f;
     long k = 10L;
 
-    //coz 7.77 is double value , and we cannot assign double value to float variable
+    // coz 7.77 is defaultly double value , and we cannot assign double value to float variable
     // double > float
+    // float -> 6-7 decimals digits
+    // double -> 15-17 decimals digits
     // float f1 = 7.77;
 
     float length = 5.3f;
@@ -88,7 +91,7 @@ public class DataType {
 
     // ASCII Code
     char letter = 97;
-    System.out.println(letter); // wecan assign har value or ASCII code
+    System.out.println(letter); // we can assign char value or ASCII code
 
     //char letter2 = letter + 1;
     // Step 1: char value + int value -> int -> cannot assign int value to char variable
@@ -103,7 +106,7 @@ public class DataType {
     System.out.println(as);
 
     int asciiForA = 'A';
-    //Step 2: assign char value into int var
+    // Step 2: assign char value into int var
     // Step 3: auto-convert char value to ascii code
     System.out.println(asciiForA);
 
@@ -111,7 +114,7 @@ public class DataType {
     System.out.println(letterForZ);
     
     int distance = 2;
-    char letterForC = (char) ('A' + distance); // this one not explicit
+    char letterForC = (char) ('A' + distance); // this one not + explicit int
     System.out.println(letterForC);
 
 

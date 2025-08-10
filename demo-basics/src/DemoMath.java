@@ -1,6 +1,6 @@
 public class DemoMath {
   public static void main(String[] args) {
-    /*int x = 5;
+    int x = 5;
     int y = 9;
       
     System.out.println(x+y);
@@ -26,7 +26,7 @@ public class DemoMath {
     double divided_result = i / j;
     double divided_result2 = i / p;
     System.out.println(divided_result);
-    System.out.println(divided_result2);*/
+    System.out.println(divided_result2); 
 
     // int/ int -> int 
     // Approach 1:
@@ -47,7 +47,7 @@ public class DemoMath {
     int i2 = 10 / 3;
     System.out.println(i2);
 
-    int i3 = 10 % 3;
+    int i3 = 10 % 4;
     System.out.println(i3);
 
     int i4 = 6 + 8 * 3;

@@ -1,7 +1,7 @@
 public class Loop {
   public static void main(String[] args){
     // if-else (program flow)
-    /*int x = 2;
+    int x = 2;
     //(;;) initializer; condition to continue; modifier
     for (int i = 0; i < 10; i++){
       System.out.println(x + " ");
@@ -15,7 +15,7 @@ public class Loop {
     // Step 6: print abc
     // Step 7: i++
     //  ...
-    // Conclusion: the above loop executed 11 lines of codes
+    // Conclusion: the above loop executed 10 lines of codes
 
     int OddNum = 1;
     for (int i = 0; i < 5; i++){
@@ -33,7 +33,7 @@ public class Loop {
     for (int i = 0; i < 9; i++){
       base *= 2;
     }
-    System.out.println(base);*/
+    System.out.println(base);
 
     //3. 1 - 100, divided by 3 and divided by 10
     for (int i = 0; i < 101; i++){
@@ -44,12 +44,12 @@ public class Loop {
 
     // 4. Given a String, check if this String contains 'l' character
     String s1 = "halollll";
-    /*int len = s1.length();
+    int len = s1.length();
     for (int i = 0; i < len; i++){
       if (s1.charAt(i) == 'l'){
         System.out.println("It contains the letter l");
       } 
-    }*/
+    }
 
     char targetCh = 'l';
     int counter = 0;
