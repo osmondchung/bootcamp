@@ -52,23 +52,30 @@ public class Array2 {
     System.out.println(Arrays.toString(namesLength));
 
     // String
-    String word = "as"; // lelel -> true, lellel -> true
-    boolean isSymmetrical = false;
+    String word = "lelel"; // lelel -> true, lellel -> true
+    boolean isPalindrome = false;
     for (int i = 0; i < word.length(); i++){
         if (word.charAt(i) == word.charAt(word.length() - (i + 1))){
-          if (i == word.length() - (i + 1)) {
-            isSymmetrical = true;
-            break;
-            }
-          isSymmetrical = true;
+          isPalindrome = true;
         } else {
-          isSymmetrical = false;
+          isPalindrome = false;
           break;
         }
-
       }
-    System.out.println(isSymmetrical); 
+    System.out.println(isPalindrome); 
 
+    // declare array
+    //
+    int[] ages = new int[4];
+    arr[0] = 10; // auto-promotion, upcast (int to long)
+    arr[1] = 100L;
+    arr[2] = -9;
+    arr[3] = 0;
+
+    int[] ages2 = new int[] {31, 9, 4}; // you know the numbers at the beginning
+    System.out.println(Arrays.toString(ages2));
+
+    
 
   }
 }
