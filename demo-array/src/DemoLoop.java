@@ -45,7 +45,7 @@ public class DemoLoop {
     System.out.println(newnum);
 
     // Find Max Min
-    int[] arr = new int[] {4, -9, 100, -50, 400, 230};
+    int[] arr = new int[] {400, 230, 100, -50, 4, 9};
     int max = arr[0];
     int min = arr[0];
     int sum = 0;
@@ -75,7 +75,7 @@ public class DemoLoop {
     System.out.println(a);
     System.out.println(b);
 
-    // moving elements
+    // 1. moving elements
     //int temp2 = arr[0];
     for (int i = 0; i < arr.length - 1; i++){
       temp = arr[i];
@@ -83,9 +83,9 @@ public class DemoLoop {
       arr[i + 1] = temp;
     }
     //arr[arr.length - 1] = temp2;
-    System.out.println(Arrays.toString(arr));
+    //System.out.println(Arrays.toString(arr));
 
-    // Move the max value to the tail
+    // 2. Move the max value to the tail
      int max1 = arr[0];
     for (int i = 0; i < arr.length - 1; i++){
       if (arr[i] > arr[i + 1]){
@@ -94,21 +94,89 @@ public class DemoLoop {
         arr[i + 1] = max1;
       }
     }
-    System.out.println(Arrays.toString(arr));
+    //System.out.println(Arrays.toString(arr));
 
     // 3. Sorting
     // Asc
-    for (int j = 0; j < arr.length;j++){
-      for (int i = 0; i < arr.length - 1; i++){
+    for (int j = 0; j < arr.length - 1; j++){ // ith of time to moving max
+      for (int i = 0; i < arr.length - j - 1; i++){ // jth index for moving max value
         if (arr[i] > arr[i + 1]){
           max1 = arr[i];
           arr[i] = arr[i+1];
           arr[i + 1] = max1;
         }
       }
+      System.out.println(Arrays.toString(arr));
     }
     System.out.println(Arrays.toString(arr));
 
+    // 4. Put all odd numbers into another array
+    int counter = 0;
+    for (int i = 0; i < arr.length; i++){
+      if (arr[i] % 2 != 0){
+        System.out.println(arr[i]);
+        counter++;
+      }
+    }
+    System.out.println(counter);
+    int oddArr[] = new int[counter];
+    int idx = 0;
+    for (int x : arr){
+      if (x % 2 == 1){
+        oddArr[idx] = x;
+        idx++;
+      }
+    }
+    System.out.println(Arrays.toString(oddArr));
+
+    // Given a string, find the most of times appeared in a given string. "hello" -> 'l'
+    // Approach 1
+    String string1 = "hello";
+    int targetIdx = -1;
+    int maxCount = 0;
+    for (int i = 0;i < string1.length();i++){
+      int countCh = 0;
+      for (int j = 0; j <string1.length(); j++){
+        if (string1.charAt(i) == string1.charAt(j)){
+          countCh++;
+        }
+      }
+      if (countCh > maxCount){
+        maxCount = countCh;
+        targetIdx = i;
+      }
+    }
+    System.out.println(string1.charAt(targetIdx));
+
+    // Approach 2
+    int[] countCh = new int[26];
+    for (int i = 0; i < string1.length(); i++){
+      countCh[string1.charAt(i) -'a']++; //!!!!!!!!!!!!!!!!!!!!
+    }
+    int maxCountCh = countCh[0];
+    int chIdx = -1;
+    for (int i = 0; i < countCh.length; i++){
+      if (countCh[i] > maxCountCh) {
+        maxCountCh = countCh[i];
+        chIdx = i;
+      }
+    }
+    char chResult = (char) (chIdx + 97);
+    System.out.println(chResult);
+
+    // Given  2 strings2 
+    // String + char -> String
+    // char + char -> int 
+    String str1 = "abcd";
+    String str2 = "pqrs";
+    String str3 = "";
+    for (int i = 0; i < str1.length(); i++){
+      //str3 += str1.charAt(i) + str2.charAt(i); // char + char -> int
+      str3 = str3 + str1.charAt(i) + str2.charAt(i); // String + char + char -> String
+    }
+    System.out.println(str3);
+
+    
 
   }
 }
