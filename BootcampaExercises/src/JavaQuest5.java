@@ -18,7 +18,12 @@ public class JavaQuest5 {
         Idx = i;
       }
     }
-    System.out.println("The index of the last character of c is " + Idx);
+    if (Idx > 0){
+      System.out.println("Found.");
+      System.out.println("The index of the last character of c is " + Idx);
+    } else {
+      System.out.println("Not Found");
+    }
 
   }
 }
