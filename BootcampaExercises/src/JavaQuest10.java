@@ -22,6 +22,7 @@ public class JavaQuest10 {
 
     System.out.print("Input an index for inserting the value: ");
     int indexPosition = input.nextInt();
+    indexPosition = indexPosition - 1;
 
     System.out.print("Input the value: ");
     int newValue = input.nextInt();
