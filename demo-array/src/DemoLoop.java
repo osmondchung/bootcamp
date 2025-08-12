@@ -176,7 +176,27 @@ public class DemoLoop {
     }
     System.out.println(str3);
 
-    
+    int x = 7;
+    do {
+      System.out.println(x);
+      x--;
+    } while (x > 2);
 
+    x = 4;
+    while ( x < 10){
+      if (x % 2 == 1){
+        System.out.println(x);
+      }
+      x++;
+    }
+
+    int h = 0;
+    while (h < 6){
+      if (h > 3){
+        break;
+      }
+      System.out.println(h);
+      h++;
+    }
   }
 }

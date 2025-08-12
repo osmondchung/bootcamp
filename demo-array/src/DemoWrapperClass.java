@@ -17,7 +17,7 @@ public class DemoWrapperClass {
     System.out.println(Double.valueOf(3.3));
     System.out.println(Short.valueOf((short)3));
     System.out.println(Byte.valueOf((byte)3));
-
+    
 
     Integer x = 3; // Assign int value to Integer variable (Auto-box)
     int x2 = x; // Assign Integer value into int variable (Un-box)
