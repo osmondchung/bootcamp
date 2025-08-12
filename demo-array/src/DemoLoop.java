@@ -161,7 +161,7 @@ public class DemoLoop {
         chIdx = i;
       }
     }
-    char chResult = (char) (chIdx + 97);
+    char chResult = (char) (chIdx + 97); 
     System.out.println(chResult);
 
     // Given  2 strings2 

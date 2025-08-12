@@ -27,16 +27,22 @@ public class DemoBigDecimal {
     // HALF_UP -> 0.5 or above, round up
     // HALF_DOWN -> 0.5 or below, round down
     BigDecimal bd10 = bd4.divide(bd5, 2, RoundingMode.HALF_UP);
+    BigDecimal bd11 = bd4.divide(bd5, 2, RoundingMode.HALF_DOWN);
+    BigDecimal bd12 = bd4.divide(bd5, 2, RoundingMode.HALF_EVEN);
+
 
     //BigDecimal bd10 = bd4.divide(bd5);
     
+    System.out.println(0.1 + 0.3);
     System.out.println(bd7.doubleValue());
-    System.out.println(0.3 - 0.1);
+    System.out.println(0.3 - 0.1); // 0.19999999999999998
     System.out.println(bd8.doubleValue());
+    System.out.println(0.1 * 0.3);
     System.out.println(bd9.doubleValue());
+    System.out.println(0.1 / 0.3); // 0.33333333333333337
     System.out.println(bd10.doubleValue());
-
-
+    System.out.println(bd11.doubleValue());
+    System.out.println(bd12.doubleValue());
 
   }
 }
