@@ -8,7 +8,7 @@ public class JavaQuest5 {
   public static void main(String[] args) {
     String str = "coding bootcamp."; // You should not change this line
     char target = 'c';
-    int Idx = 0;
+    int Idx = -1;
 
     // if found, print "Found."
     // if not found, print "Not Found."
@@ -18,7 +18,7 @@ public class JavaQuest5 {
         Idx = i;
       }
     }
-    if (Idx > 0){
+    if (Idx >= 0){
       System.out.println("Found.");
       System.out.println("The index of the last character of c is " + Idx);
     } else {
