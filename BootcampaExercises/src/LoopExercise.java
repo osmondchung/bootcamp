@@ -1,6 +1,7 @@
 package BootcampaExercises.src;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 
 public class LoopExercise {
@@ -207,12 +208,17 @@ public class LoopExercise {
 
     // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.6
     float[] arr16 = {0.2f, 0.3f, 0.6f};
+    BigDecimal[] arr17 = new BigDecimal[arr16.length];
 
     // 17. Add value 0.1 to each of value in array arr16 /////////
     // Print: [0.3, 0.4, 0.7]
     // Use: BigDecimal
     float val = 0.1f;
-    
+
+    for (int i = 0; i < arr16.length; i++){
+      arr17[i] = BigDecimal.valueOf(arr16[i]).add(BigDecimal.valueOf(val)).setScale(1, RoundingMode.HALF_UP);
+    }
+    System.out.println(Arrays.toString(arr17));
     
 
     // 18. Count the number of target strings in the String[]
