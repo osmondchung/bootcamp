@@ -58,6 +58,3 @@ public class Order {
 
 }
 
-/*i need to create three classes in Java: Customer class, Order class, and Item class.
-For each customer in the customer class, they have their own order, and for every order they made, there are items.
-In the item class, there will be */
