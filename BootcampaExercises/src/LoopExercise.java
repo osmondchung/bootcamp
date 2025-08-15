@@ -10,20 +10,20 @@ public class LoopExercise {
     // Use: for loop
     String str = "hello";
     for (int i = 0; i < 6; i++){
-      //System.out.println(str);
+      System.out.println(str);
     }
     
     // 2. Expected output: "0,1,2,3,4"
     // Use: for loop
     for (int i = 0; i < 5; i++){
-        //System.out.println(i);
+        System.out.println(i);
     }
 
     // 3. Print even numbers between 2 and 20
     // Use: for loop + if
     for (int i = 0; i < 20; i++){
       if (i % 2 == 0 && i > 2){
-        //System.out.println(i);
+        System.out.println(i);
       }
     }
 
@@ -31,7 +31,7 @@ public class LoopExercise {
     // Use: for loop + if
     for (int i = 1; i < 100; i++){
       if (i % 3 == 0 || i % 5 == 0){
-        //System.out.println(i);
+        System.out.println(i);
       }
     }
 
@@ -41,7 +41,7 @@ public class LoopExercise {
     for (int i = 0; i < 15; i++){
       sum = sum + i;
     }
-    //System.out.println(sum);
+    System.out.println(sum);
 
     // 6. sum up all odd numbers betwen 0 - 10
     // Sum up all even numbers betwen 0 - 10
@@ -56,7 +56,7 @@ public class LoopExercise {
         oddSum += i;
       }
     }
-    //System.out.println("evenSum: " + evenSum + "oddSum: " + oddSum);
+    System.out.println("evenSum: " + evenSum + "oddSum: " + oddSum);
 
     // 7. Check if 'd' exists in the string.
     // print "d is found."
@@ -71,9 +71,9 @@ public class LoopExercise {
       }
     }
     if (isFound){
-      //System.out.println("d is found");
+      System.out.println("d is found");
     } else{
-      //System.out.println("d is not found");
+      System.out.println("d is not found");
     }
 
     // 8. Check if the string s8b is a substring of s8a
@@ -93,9 +93,9 @@ public class LoopExercise {
       }
     }
     if (isSubString == true){
-      //System.out.println("s8b is a substring.");
+      System.out.println("s8b is a substring.");
     } else {
-      //System.out.println("s8b is not a substring.");
+      System.out.println("s8b is not a substring.");
     }
 
     // 9. Count the number of char value in the given String s9
@@ -109,7 +109,7 @@ public class LoopExercise {
         counter++;
       }
     }
-    //System.out.println("count= " + counter);
+    System.out.println("count= " + counter);
 
     // 10. Replace all char value 'x' in the given String array by 'k'
     // Print arr10: ["akc", "kkk", "k", "kbk", "mkk"]
@@ -120,7 +120,7 @@ public class LoopExercise {
         arr10[j] = arr10[j].replace('x', 'k');
       }
     }
-    //System.out.println(Arrays.toString(arr10));
+    System.out.println(Arrays.toString(arr10));
     
 
     // 11. Count the number of Uppercase char value in the given string s11
@@ -134,7 +134,7 @@ public class LoopExercise {
       counter++;
       }
     }
-    //System.out.println("count uppercase= " + counter);
+    System.out.println("count uppercase= " + counter);
 
     // 12. Print the following pattern of * value
     // *****
@@ -142,9 +142,9 @@ public class LoopExercise {
     // *****
     for (int i = 0; i < 3; i++){
       for (int j = 0; j < 5; j++){
-        //System.out.print("*");
+        System.out.print("*");
       }
-      //System.out.println();
+      System.out.println();
     }
 
     // 13. Given a string value s13, each of the char value has its score.
@@ -184,7 +184,7 @@ public class LoopExercise {
       }
       totalScore = totalScore + score;
     }
-    //System.out.println(totalScore);
+    System.out.println(totalScore);
     
     // 14. Assign the long values of 1, 4, 9, -4 to the given array arr14
     long[] arr14 = new long[4];
@@ -204,7 +204,7 @@ public class LoopExercise {
         min = arr14[i];
       }
     }
-    //System.out.println("max= " + max + " " + "min= " + min);
+    System.out.println("max= " + max + " " + "min= " + min);
 
     // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.6
     float[] arr16 = {0.2f, 0.3f, 0.6f};
@@ -231,7 +231,7 @@ public class LoopExercise {
         counter3++;
       }
     }
-    //System.out.println("count name= " + counter3);
+    System.out.println("count name= " + counter3);
 
     // 19. swap the max digit and min digit 
     // Assumption: each digit value appear once in the String
@@ -267,7 +267,7 @@ public class LoopExercise {
         maxLengthString = arr20[i];
       }
     }
-    //System.out.println("longest=" + maxLengthString);
+    System.out.println("longest=" + maxLengthString);
     
   }
 }
