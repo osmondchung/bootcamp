@@ -52,7 +52,7 @@ public class Array2 {
     System.out.println(Arrays.toString(namesLength));
 
     // String
-    String word = "lelel"; // lelel -> true, lellel -> true
+    String word = "-10"; // lelel -> true, lellel -> true
     boolean isPalindrome = false;
     for (int i = 0; i < word.length(); i++){
         if (word.charAt(i) == word.charAt(word.length() - (i + 1))){

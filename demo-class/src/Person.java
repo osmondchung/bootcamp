@@ -30,6 +30,18 @@ public class Person {
   public String getName(){
     return this.name;
   }
+
+  public boolean isElderly(){
+    return this.age >65;
+  }
+
+  public static boolean isElderly(int age){ //!!!!!!!!!!!!
+    return age > 65;
+  }
+
+  public static boolean isElderly2(Person person){ //!!!!!!!!!!!!
+    return person.getAge() > 65;
+  }
   
   public static void main(String[] args) {
     // "new" -> create object

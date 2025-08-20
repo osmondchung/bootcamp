@@ -1,59 +1,40 @@
 // One to Many
+
+import java.math.BigDecimal;
+
 public class Order {
   private Item[] items;
   
-  //
-  public void setItems(Item[] items){
+  public Order() {
+    // initial load of creating object
+    this.items = new Item[0];
+  }
+
+  // method to add item to order
+  public void add(Item item){
+    // create new array
+    Item[] items = new Item[this.items.length +1];
+    // copy the elements in this.items to new array items
+    for (int i = 0; i < this.items.length; i++){
+      items[i] = this.items[i];
+    }
+    // Add the new item to the tail of array
+    items[items.length - 1] = item;
+    // replace the new array to the object array address
     this.items = items;
   }
 
-  public Item[] getItems(){
-    return this.items;
-  }
-
-  public void add(Item item){
-    Item[] items = new Item[this.items.length +1];
-    for (int i = 0; i < items.length; i++){
-      items[i] = items[i];
-    }
-  }
   // method presentation -> total price
   public double totalPrice(){
-    double sum = 0; 
-    for (int i = 0; i < items.length; i++){
-      sum += this.getItems()[i].Subtotal();
+    BigDecimal total = BigDecimal.valueOf(0.0);
+    for (Item item : this.items){
+      total = total.add(BigDecimal.valueOf(item.Subtotal()));
     }
-    return sum;
+    return total.doubleValue();
   }
 
   public static void main(String[] args) {
-    Item item1 = new Item();
-    item1.setPrice(10);
-    item1.setQuantity(3);
 
-    Item item2 = new Item();
-    item2.setPrice(20);
-    item2.setQuantity(2);
-    
-    Item[] items = new Item[2];
-    items[0] = item1;
-    items[1] = item2;
-
-    Order order1 = new Order();
-    order1.setItems(items);
-
-    Item item3 = new Item();
-    item3.setPrice(100);
-    item3.setQuantity(1);
-    //order1.add(item3);
-    
-    Order order2 = new Order();
-    order2.setItems(items);
-
-    System.out.println(order1.getItems()[0].Subtotal());
-    System.out.println(order1.totalPrice());
-    System.out.println(order2.getItems()[0].Subtotal());
-    System.out.println(order2.totalPrice());
   }
 
 }
