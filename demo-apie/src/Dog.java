@@ -4,6 +4,9 @@
 // Encapsulation
 
 // 
+
+import java.util.Objects;
+
 public class Dog extends Animal{
 
   private boolean isMale;
@@ -15,6 +18,29 @@ public class Dog extends Animal{
 
   public boolean isMale(){
     return this.isMale;
+  }
+
+  @Override
+  public boolean equals(Object obj){
+    if (this == obj)
+      return true;
+    if (!(obj instanceof Dog))
+      return false;
+    Dog dog = (Dog) obj;
+      return super.getName().equals(dog.getName()) && super.getAge() == dog.getAge() && this.isMale == dog.isMale();
+  }
+
+  @Override
+  public int hashCode(){
+    return Objects.hash(this.isMale, super.getAge(), super.getName());
+  }
+
+  @Override
+  public String toString(){
+    return "Dog()" //
+      + super.toString()
+      + ",weight=" + this.isMale
+      + ")";
   }
 
   // 

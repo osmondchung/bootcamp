@@ -10,16 +10,12 @@ public abstract class Shape {
   public String getColor(){
     return this.color;
   }
-  
-  public void setColor(String color){
-    this.color = color;
-  }
 
   public static void main(String[] args) {
-    Shape s1 = new Square("blue", 4);
-    Shape c1 = new Circle("red", 3);
+    Shape s1 = new Square("blue", 4.0);
+    Shape c1 = new Circle("red", 3.0);
     System.out.println(s1.area());
-    //System.out.println(c1.area());
+    System.out.println(c1.area());
   }
 
 }

@@ -3,6 +3,7 @@ public class DemoStringBuilder {
     StringBuilder sb = new StringBuilder("");
     sb.append("a"); // similar to setter
     sb.append("b");
+    System.out.println(sb);
     System.out.println(sb.toString());
 
     String str = "";

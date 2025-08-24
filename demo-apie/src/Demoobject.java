@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class Demoobject {
   public static void main(String[] args) {
-    Object o1 = new Object(); // Object.class is a concrete class
 
     // ! In Primitive World, Java helps conversion
     int x = 3; 
@@ -22,13 +21,37 @@ public class Demoobject {
     System.out.println(a1.getAge());
     System.out.println(a1.getName());
 
+    // WHy do we need parent class
+    // 1. Inheritance -> Polymorphism -> Encapsulation
+    // Advantageas: Maintainance
     Shape s1 = new Circle("Red", 3.5);
     Shape s2 = new Square("blue", 8);
     Shape s3 = new Circle("black", 4);
 
     Shape[] shapes = new Shape[] {s1, s2, s3};
 
+    // Object.class
+    // Cat extends Animal extends Object
+    Object o1 = new Object(); // Object.class is a concrete class;
+    o1 = new Cat("lucas", 2, 3.4);
+    // Disadvantage: o1 can only call Object's methodCat
 
+    // By defaut, Java disallow assigning o1 (Object object) to c2 (Cat type) coz risky
+    // potential runtime error
+    // Solution: Casting, risky
+    Cat c2 = (Cat) o1;
+    System.out.println(c2.getName());
+
+    Cat c3 = new Cat("lucas", 2, 3.4);
+    System.out.println(c2.equals(c3)); // false (different objects, before rewritting equals in Cat.class)
+    // So, actually c2.equals() is referring to Object.equals
+    // True, after rewritting equals() in Cat.class
+
+
+    System.out.println(c2.hashCode() == c3.hashCode()); // true, coz rewritted hashCode()
+    // toString()
+    System.out.println(c2); // Cat(Animal(name=lucas,age=2),weight=3.4)
+    System.out.println(c3); // Cat(Animal(name=lucas,age=2),weight=3.4)
   }
 
   // Parent Class
@@ -42,5 +65,6 @@ public class Demoobject {
     }
     return totalArea.doubleValue();
   }
+  
 
 }

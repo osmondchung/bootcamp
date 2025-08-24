@@ -11,28 +11,21 @@ public class Library {
     this.bookshelf = bookshelf;
   }
 
-  public void add(Book book){
-    // create new array
-    Book[] books = new Book[this.book.length +1];
-    // copy the elements in this.items to new array items
-    for (int i = 0; i < this.book.length; i++){
-      books[i] = this.book[i];
-    }
-    // Add the new item to the tail of array
-    books[books.length - 1] = book;
-    // replace the new array to the object array address
-    this.book = books;
-  }
-
   private void remove(int idex){
 
   }
 
   public static void main(String[] args) {
-    Library lib = new Library();
-    Book b1 = new Book();
+    Librarian libra1 = new Librarian();
+    Bookshelf bs1 = new Bookshelf();
+    Library lib1 = new Library(libra1, bs1);
+    Book b1 = new Book("Power", "Louis", 2000);
+    Book b2 = new Book("Leader", "oscar", 1980);
+    bs1.add(b1);
+    bs1.add(b2);
+    bs1.getBook();
+    System.out.println(bs1.getBook());
 
-    
   }
 
 

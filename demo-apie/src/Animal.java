@@ -39,12 +39,19 @@ public abstract class Animal { // animal is a abstract class
   }
 
   public int getAge(){
-    System.out.println("1111111111111");
     return this.age;
   }
 
   public String intro(){
     return "This is " + this.name + ", and " + this.age + " year old. ";
+  }
+
+  @Override
+  public String toString(){
+    return "Animal(" //
+      + "name=" + this.name //
+      + ",age=" + this.age //
+      + ")";
   }
 
   public static void main(String[] args) {

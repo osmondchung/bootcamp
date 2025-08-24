@@ -64,6 +64,7 @@ public class Customer {
 
     System.out.println(cus1.totalPurchasedAmount());
     System.out.println(cus1.isVip());
-
+    System.out.println(Math.pow(2,31)-1);
+    System.out.println(-Math.pow(2,31));
   }
 }

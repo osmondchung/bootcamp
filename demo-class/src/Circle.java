@@ -4,6 +4,10 @@ public class Circle {
   // attribute: raw data, fundemental to form a circle
   private double radius;
   
+  public Circle(double radius){
+    this.radius = radius;
+  }
+
   // Method: presentation of existing attributes
   public double getDiameter(){
     // BigDecimal 
@@ -40,8 +44,7 @@ public class Circle {
     // get radius
     // get diameter
 
-    Circle c1 = new Circle();
-    c1.setRadius(3.3);
+    Circle c1 = new Circle(3.3);
     System.out.println(c1.getRadius());
     System.out.println(c1.getDiameter());
     System.out.println(c1.getArea());
