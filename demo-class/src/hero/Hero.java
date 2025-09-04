@@ -1,16 +1,11 @@
+package hero;
 import java.math.BigDecimal;
 
-public class Hero {
-  /*private static final int[] MAX_HP = new int[] {20, 40, 60, 80, 100, 120, 140, 160, 180, 200};
-  private static final int[] PHY_ATTACK = new int[] {10, 15, 20, 25, 30, 35, 40, 45, 50, 55};
-  private static final int[] MAX_MP = new int[] {5, 10, 15, 20, 25, 30, 35, 40, 45, 50};
-  private static final int[] PHY_DEFENSE = new int[] {3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-  private static final double[] MAX_EXP = new double[] {3.0, 5.0, 7.0, 9.0, 11.0, 13.0, 15.0, 17.0, 19.0, 21.0};
-  private static final double[] EXP_GAINED = new double[] {1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5};*/
+public abstract class Hero {
   private static int idCounter = 0;
 
-  private int id;         // Hero's ID
-  private int level;     // Hero's level
+  private int id;
+  private int level;
   private int hp;
   private int mp;
   private double exp;
@@ -101,7 +96,7 @@ public class Hero {
   }
 
   public static void main(String[] args) {
-    Hero hero1 = new Hero();
+    Hero hero1 = new Archer();
     System.out.println("Hero Level: " + hero1.getLevel());
     System.out.println("Hero Max HP: " + hero1.getMaxHp());
     System.out.println("Hero Current HP: " + hero1.getHp());
@@ -110,7 +105,7 @@ public class Hero {
     System.out.println("Is Hero Alive? " + hero1.isAlive());
     System.out.println("Max HP at Level 5: " + Heros.getMaxHP(5));
 
-    Hero hero2 = new Hero();
+    Hero hero2 = new Mage();
     hero1.attack(hero2);
     System.out.println(hero1.getHp());
     System.out.println(hero2.getHp());
@@ -120,6 +115,8 @@ public class Hero {
     System.out.println(hero1.getHp());
     System.out.println(hero2.getHp());
     System.out.println(hero2.isAlive());
+
+    Mage A3 = new Mage();
       
 
   }

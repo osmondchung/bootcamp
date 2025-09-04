@@ -1,18 +1,16 @@
-## Getting Started
+## Class vs Abstract Class
+  - Abstract Class cannot be used for creating object
+  - They are both having attributes
+  - Abstract Class may have abstract method
+  - They are both having constructor
+  - They may have static method and static variable
+  - Class inherits attribute, instance method ONLY (But not for constructor)
+  - Every Class has one parent Class ONLY (parent=abstract class/ concrete class)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Interface vs Abstract Class
+  - They have abstract method (Interface has abstract method only)
+  - Interface has no attribute
+  - Interface has no concrete method
+  - Interface has no constructor
+  - They may have static method and static variable
+  - every Class has one parent class, but many interfaces

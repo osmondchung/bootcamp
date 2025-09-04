@@ -29,6 +29,7 @@ public class Demoobject {
     Shape s3 = new Circle("black", 4);
 
     Shape[] shapes = new Shape[] {s1, s2, s3};
+    System.out.println(totalArea(shapes));
 
     // Object.class
     // Cat extends Animal extends Object
@@ -61,9 +62,10 @@ public class Demoobject {
   public static double totalArea(Shape[] shapes){
     BigDecimal totalArea = BigDecimal.ZERO;
     for (int i = 0; i < shapes.length; i++){
-      totalArea = totalArea.add(BigDecimal.valueOf(shapes[i].area())) ;
+      totalArea = totalArea.add(BigDecimal.valueOf(shapes[i].area()));
     }
     return totalArea.doubleValue();
+    
   }
   
 

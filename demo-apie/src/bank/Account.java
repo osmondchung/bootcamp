@@ -2,6 +2,8 @@ package bank;
 
 import java.math.BigDecimal;
 
+// Designing!!!!!!!!!!!!! think about u want to use wt to find wt, wt to relate wt
+
 // Account -> abstract
 // Personal (hkid put to User) / Company (brCode put to CompanyInfo)
 public class Account{
