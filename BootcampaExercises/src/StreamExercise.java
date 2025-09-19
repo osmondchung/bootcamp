@@ -17,7 +17,7 @@ public class StreamExercise {
     // sort the result in descending order.
     List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     // Output: [100, 64, 36, 16, 4]
-    System.out.println(numbers.stream().filter(n -> n %2 ==0).map(n -> n*n).collect(Collectors.toList()));
+    System.out.println(numbers.stream().filter(n -> n %2 ==0).map(n -> n*n).sorted((n1,n2) -> n1 > n2?-1:1).collect(Collectors.toList()));
 
     // 2. Filtering and Collecting
     // Task: Given a list of names, filter the names that start with "A" and collect them into a list.
@@ -118,7 +118,6 @@ public class StreamExercise {
 
     // Output: {30=[Alice, Charlie], 25=[Bob]} (Map)
 
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // 10. Partitioning and Collecting to a Map (Partition by Gender)
     // Task: Given a list of Staff with their names and genders, partition them into two groups: male
     // and female, and collect the result into a Map<Boolean, List<Person>>.
@@ -147,7 +146,7 @@ public class StreamExercise {
     // Output: [30, 40, 60]
     System.out.println(numbers4.stream().filter(n -> n > 10).map(n -> n * 2).collect(Collectors.toList()));
 
-    // 12. Mapping to a Custom Object and Collecting to a List !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // 12. Mapping to a Custom Object and Collecting to a List
     // Task: Given a list of names and a constant default value, map each name to a Person object (name
     // and default value for age) and collect the result into a list.
 
